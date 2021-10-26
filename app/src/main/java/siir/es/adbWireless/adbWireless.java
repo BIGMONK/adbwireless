@@ -101,8 +101,9 @@ public class adbWireless extends Activity {
 		this.iv_button.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
 				Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-				if (Utils.prefsHaptic(adbWireless.this))
+				if (Utils.prefsHaptic(adbWireless.this)) {
 					vib.vibrate(45);
+				}
 
 				try {
 					if (!mState) {
